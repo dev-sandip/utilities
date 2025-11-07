@@ -121,10 +121,17 @@ func serveDirectoryListing(w http.ResponseWriter, r *http.Request, path, baseDir
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>File Server - %s</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&display=swap" rel="stylesheet">
+<style>
+*{
+font-family: 'Recursive', sans-serif;
+}
+</style>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 text-gray-900 font-roboto min-h-screen p-6">
+<body class="bg-gray-100 text-gray-900 min-h-screen p-6">
     <div class="max-w-5xl mx-auto">
         <h1 class="text-3xl font-bold mb-6">Directory: %s</h1>
         <div class="bg-white shadow-md rounded-lg overflow-hidden">
