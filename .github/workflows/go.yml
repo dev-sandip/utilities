@@ -19,20 +19,20 @@ jobs:
 
       - name: Install Dependencies
         run: go mod download
-        working-directory: ./utilities/file-server
+        working-directory: file-server
 
       - name: Build
         run: go build -v -o fileserver main.go
-        working-directory: ./utilities/file-server
+        working-directory: file-server
 
       - name: Test
         run: go test -v ./...
-        working-directory: ./utilities/file-server
-        continue-on-error: true # Allows the workflow to continue if no tests are found
+        working-directory: file-server
+        continue-on-error: true # Allows workflow to continue if no tests are found
 
       - name: Upload Binary Artifact
         uses: actions/upload-artifact@v4
         with:
           name: fileserver
-          path: utilities/file-server/fileserver
+          path: file-server/fileserver
           retention-days: 7
