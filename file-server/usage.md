@@ -69,3 +69,4 @@ This guide explains how to make the `fileserver` binary accessible from anywhere
   ```
 - If the port is in use, choose a different one with the `-port` flag.
 - On Windows, the binary is named `fileserver.exe`.
+- If you want to open the port default port `8080` for your local network `sudo ufw allow from 192.168.1.0/24 to any port 8080` for linux systems using UFW firewall.It will only allow access from the local network. Adjust the IP range as needed .
